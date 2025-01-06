@@ -1,0 +1,10 @@
+services:
+  iot_gateway:
+    build: .
+    container_name: iot_gateway
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONPATH=/app
+    env_file:
+      - .env
